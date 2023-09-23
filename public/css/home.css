@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+body{
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+}
+h1{
+   font-size: 70px;
+}
+.tempelates{
+    display: flex;
+    flex-direction: row;
+}
+.t1{
+    margin-right: 30px;
+}
+.t2{
+    margin-left: 30px;
+}
+
+.btn{
+    height: 300px;
+    width: 200px;
+transition: 0.75s ease-in-out;
+    font-weight: bolder;
+    border: transparent;
+    box-shadow: black 10px 10px 30px;
+}
+
+.btn h2{
+    font-size: 30px;
+}
+.btn:hover{
+transform: skew(3deg,3deg);
+cursor: pointer;
+}
+#btn2{
+    background-image: url(comingSoon.png);
+    background-size: cover;opacity: 60%;
+}
+#btn1{
+    background-image: url(tempelate1.png);
+    background-size: cover;
+    
+}
+
+span{
+    color: #ba0606;
+    position: relative;
+    animation-name: wiggle;
+    animation-iteration-count:  infinite; 
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes wiggle{
+
+0%{
+    bottom: 0px;
+}
+25%{
+   bottom: 4px;
+
+}
+50%{
+    bottom: 0px;
+}
+
+75%{
+   bottom: 4px;
+}
+
+100%{
+    bottom: 0px;
+
+}
+
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Fill Up Your Details</h1>
+    <form action="/resume" method="post">
+        <h2>Personal Info</h2>
+        <div class="personalInfo card">
+            <label>Name:
+            <input type="text" class="normal" name="pname" placeholder="Your name" required></label>
+            <label>Profession:
+            <input type="text" class="normal" placeholder="Profession" name="prof" required></label>
+            <textarea type="text" class="big" maxlength="150"  placeholder="Small description about yourself" name="about" required></textarea>
+            <label>Address:
+            <input type="text" class="normal" placeholder="Address" name="address" required></label>
+            <label>Contact Number:
+            <input type="number" class="normal" placeholder="Mobile" name="mob" required></label>
+        
+
+        <div id="social">
+            <label>Social:
+            <input class="normal" placeholder="Links" name="social"></label>
+            <div id="addSocial">
+                <button type="button" class="btn" id="scbtn" onclick="addSocial()">+ Add Social Links</button>
+            </div>
+        </div>
+</div>
+<h2>Academics Info</h2>
+
+        <div class="academics card">
+            <label>College/University:
+            <input type="text" placeholder="College/University name" class="normal" name="college" required></label>
+            <label>Years:
+            <input type="text" class="normal" placeholder="Starting Year - End Year" name="year" required></label>
+            <label>CGPA:
+            <input type="number" class="normal" placeholder="CGPA" name="cgpa" required></label>
+            <label>10+2:
+            <input type="text" class="normal" placeholder="Higher Secondary School name" name="shschool" required></label>
+            <label>Passing Year:
+            <input type="text" class="normal" placeholder="Year" name="year1" required></label>
+            <label>Percentage:
+            <input type="number" class="normal" placeholder="%" name="per1" required></label>
+            <label>10th:
+            <input type="text" class="normal" placeholder="Primary High School name" name="phschool" required></label>
+            <label>Passing Year:
+            <input type="text" class="normal" placeholder="Year" name="year2" required></label>
+            <label>Percentage:
+            <input type="number" class="normal" placeholder="%" name="per2" required></label>
+        </div>
+
+        <h2>Work Experience Info</h2>
+
+        <div id="workExperience" class="card">
+            <label>Company/Project Name:
+            <input type="text" class="normal" placeholder="Name" name="wexp" required></label>
+            <textarea type="text" class="big" maxlength="250" placeholder="Small description about your experience" name="desc" required></textarea>
+            <div id="addExp">
+                <button type="button" class="btn" onclick="addExperience()">+ Add Experiences</button>
+            </div>
+        </div>
+
+        <h2>Skills which makes you different</h2>
+        <div id="skills" class="card">
+            <label>Skill:
+            <input type="text" class="normal" placeholder="Add Skills" name="skill" id="s" required></label>
+            <div id="addSkills">
+                <button type="button" class="btn" id="skillsbtn" onclick="addSkills()">+ Add Skills</button>
+            </div>
+        </div>
+<div class="fbtn">
+        <button class="rbtn" type="reset">Reset</button>
+
+        <!-- Form Submission button -->
+        <button class="sbtn" type="submit">Create Resume</button></div>
+    </form>
+
+    <script>
+        function addSocial() {
+            console.log("Social link added");
+            var socbtn = document.getElementById("addSocial");
+            var socDiv = document.getElementById("social");
+            let newLink = document.createElement("input");
+            newLink.classList.add("normal");
+            newLink.setAttribute("placeholder", "Links");
+            newLink.setAttribute("name","social");
+            socDiv.insertBefore(newLink, socbtn);
+            
+        
+            
+        }
+
+        function addExperience(){
+            console.log("Experience added");
+            var expbtn=document.getElementById("addExp");
+            var expDiv=document.getElementById("workExperience");
+            let newExp=document.createElement("input");
+            let newDesc=document.createElement("textarea");
+            
+            newExp.classList.add("normal");
+            newExp.setAttribute("placeholder","Name");
+            newExp.setAttribute("name","wexp");
+            newDesc.classList.add("big");
+            
+            newDesc.setAttribute("placeholder","Small description about your experience");
+            newDesc.setAttribute("name","desc");
+            expDiv.insertBefore(newExp,expbtn);
+            expDiv.insertBefore(newDesc,expbtn);
+        }
+
+        function addSkills(){
+            console.log("Skill added");
+            var skbtn=document.getElementById("addSkills");
+            var skDiv=document.getElementById("skills");
+            let newSkill=document.createElement("input");
+            newSkill.classList.add("normal");
+            newSkill.setAttribute("placeholder","Add Skills");
+            newSkill.setAttribute("name","skill");
+            skDiv.insertBefore(newSkill,skbtn);
+        } 
+</script>
+
+
+</body>
+
+</html>

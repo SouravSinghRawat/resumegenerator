@@ -1,0 +1,20 @@
+{
+  "name": "resumegenerator",
+  "version": "1.0.0",
+  "description": "this website generates resume",
+  "main": "app.js",
+  "scripts": {
+    "nodemon": "nodemon app.js"
+  },
+  "author": "sourav singh rawat",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+    
+  }
+}

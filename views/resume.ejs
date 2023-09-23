@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/resume.css">
+</head>
+
+<body>
+
+    <div class="outerlayer">
+        <div class="page">
+
+            <!-- personal details name, profession and contact details -->
+            <div class="personal_details">
+                <div class="name">
+                    <h1>
+                        <%=rname%>
+                    </h1>
+                    <p>
+                        <%=pro%>
+                    </p>
+                </div>
+                <div class="contact">
+                    <p>
+                        <%=Ad%>
+                    </p>
+                    <p>Mob no. <%=Mb%>
+                    </p>
+                    <%for(var i=0;i<socs.length;i++){%>
+                        <p>
+                            <%=socs[i]%>
+                        </p>
+                        <%}%>
+                </div>
+            </div>
+
+            <!-- about section -->
+            <div class="desc">
+                <div class="heading">
+                    <h2>ABOUT</h2>
+                    <div class="hl"></div>
+                </div>
+                <p>
+                    <%=at%>
+                </p>
+            </div>
+
+            <hr>
+            <!-- Experience Details -->
+            <div class="experience">
+                <div class="heading">
+                    <h2>EXPERIENCE</h2>
+                    <div class="hl"></div>
+                </div>
+                
+                    <% for(k=0;k<we.length;k++){ %>
+                        <div class="expDetails">
+                        <h3>
+                            <%=we[k]%>
+                        </h3>
+                                <p>
+                                    <%=ds[k]%>
+                                </p></div>
+                                <%}%>
+                
+            </div>
+
+            <!-- Soft Skills Area -->
+
+            <div class="skills">
+                <div class="heading">
+                    <h2>SKILLS</h2>
+                    <div class="hl"></div>
+                </div>
+                <ul>
+                    <%for(var j=0;j<sl.length;j++){%>
+                        <li>
+                            <%= sl[j] %>
+                        </li>
+                        <%}%>
+                </ul>
+            </div>
+
+
+            <!-- Academics Area -->
+
+            <div class="education">
+                <div class="heading ">
+                    <h2>EDUCATION</h2>
+                    <div class="hl"></div>
+                </div>
+                <div class="educ">
+                    <h3>BACHELOR'S<br>DEGREE</h3>
+                    <div class="educDetails">
+                        <h4>
+                            <%=Coll%>
+                        </h4>
+                        <p><b>Years:</b>
+                            <%=y%> <b>CGPA:</b>
+                                <%=cg%>
+                        </p>
+                    </div>
+                </div>
+                <div class="educ">
+                    <h3>HIGHER<br>SECONDARY<br>SCHOOL</h3>
+                    <div class="educDetails">
+                        <h4>
+                            <%=shs%>
+                        </h4>
+                        <p><b>Passing Year:</b>
+                            <%=y1%><b>Percentage:</b>
+                                <%=p1%>%
+                        </p>
+                    </div>
+                </div>
+                <div class="educ">
+                    <h3>SECONDARY<br>SCHOOL</h3>
+                    <div class="educDetails">
+                        <h4>
+                            <%=phs%>
+                        </h4>
+                        <p><b>Passing Year:</b>
+                            <%=y2%> <b>Percentage:</b>
+                                <%=p2%>%
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
